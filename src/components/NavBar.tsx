@@ -18,7 +18,7 @@ export default function NavBar() {
                 </LeftGroup>
                 <RightGroup>
                     <BarraPesquisa />
-                    <Button />
+                    <Button text="Entrar"/>
                 </RightGroup>
 
             </Container>
@@ -50,7 +50,7 @@ const RightGroup = styled.div`
 `;
 
 const Logo = styled.img`
-    width: 200px;
+    width: 180px;
 `;
 
 const Menu = styled.ul`

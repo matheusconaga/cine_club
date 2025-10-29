@@ -1,34 +1,33 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
 
-export default function AppButton() {
+type AppButtonProps = {
+  text: string;
+  secundary?: boolean; 
+};
 
-    return (
-        <Button>
-            Entrar
-        </Button>
-    )
-
+export default function AppButton({ text, secundary = false }: AppButtonProps) {
+  return <Button secundary={secundary}>{text}</Button>;
 }
 
-const Button = styled.button`
+const Button = styled.button<{ secundary: boolean }>`
+  background-color: ${({ secundary }) =>
+    secundary ? "rgb(33, 37, 85, 70)" : "rgb(46, 129, 254, 1)"};
+  padding: 12px 30px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 
-    background-color: rgb(46, 129, 254, 100);
-    padding: 8px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
+ &:hover {
+    background-color: ${({ secundary }) =>
+      secundary ? "rgb(17, 21, 69, 100)" : "rgb(36, 109, 214)"};
+  }
 
-    &:hover {
-    background-color: rgb(36, 109, 214);
-    }
-
-    &:active {
-    background-color: rgb(26, 89, 194);
-    }
-
+  &:active {
+    background-color: ${({ secundary }) =>
+      secundary ? "rgb(37, 21, 69, 100)" : "rgb(26, 89, 194)"};
+  }
 `;
