@@ -1,4 +1,4 @@
-import {styled} from "styled-components";
+import { styled } from "styled-components";
 
 export default function AppButton() {
 
@@ -14,12 +14,12 @@ const Button = styled.button`
 
     background-color: rgb(46, 129, 254, 100);
     padding: 8px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-radius: 5px;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     cursor: pointer;
 
